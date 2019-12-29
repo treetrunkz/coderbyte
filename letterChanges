@@ -1,0 +1,10 @@
+function LetterChanges(str) { 
+var vowels = ['a', 'e', 'i', 'o', 'u'];
+  for(i=0; i < str.length; i++){
+  if(96 < str.charCodeAt(i) && str.charCodeAt(i) < 123) {
+   str = str.replace(str.charAt(i), String.fromCharCode(str.charCodeAt(i) + 1));
+  }
+}
+  str = str.replace(/[aeiou]+/g, function(m){ return m.toUpperCase(); });
+  return str; 
+}
